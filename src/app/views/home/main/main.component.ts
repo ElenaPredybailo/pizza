@@ -50,7 +50,7 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(PopupComponent)
   private popupComponent!: PopupComponent;
   ngAfterViewInit() {
-    this.popupComponent.open();
+    // this.popupComponent.open();
   }
 
   ngOnDestroy() {
