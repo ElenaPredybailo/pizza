@@ -1,0 +1,36 @@
+<section class="order" id="order">
+  <div class="container">
+    <div class="order-text">
+      <a class="order-text-title double-title" routerLink="/order"
+         [queryParams]="{product: formValues.productTitle + '1'}"><span>Хватит думать! </span>Доставим заказ за 30
+        минут!</a>
+      <div class="order-text-message">
+        Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+        заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на
+        следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+        голодный!
+      </div>
+    </div>
+    <div class="order-form" id="order-form">
+      <span class="p-float-label">
+        <input pInputText type="text" class="order-input" id="product-input"
+           placeholder="" [(ngModel)]="formValues.productTitle">
+        <label for="product-input">Пицца</label>
+      </span>
+      <span class="p-float-label">
+        <input pInputText type="text" class="order-input" id="address-input" name="address" placeholder=""
+               [(ngModel)]="formValues.address">
+        <label for="address-input">Адрес доставки</label>
+      </span>
+      <span class="p-float-label">
+       <input pInputText type="text" class="order-input" id="phone-input" placeholder=""
+              [(ngModel)]="formValues.phone">
+        <label for="phone-input">Телефон</label>
+      </span>
+      <button tuiButton class="button" id="create-order" (click)="createOrder()">Оформить заказ</button>
+    </div>
+    <div class="order-image">
+      <img src="../../../assets/images/pizza.png" alt="Пицца">
+    </div>
+  </div>
+</section>
